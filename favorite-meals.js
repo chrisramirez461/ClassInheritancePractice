@@ -6,8 +6,8 @@ class Meals {
 
     }
 
-    NewRecipe() {
-        this.recipe++;
+    addGarnish() {
+        this.ingredients++;
     }
 }
 
@@ -32,12 +32,28 @@ class Steak extends Meals {
             console.log('YOU OVERCOOKED IT!!!')
         }
     }
-}
+};
 
-let Meals = new Meals(5, 'easy', 'Ommelete')
-let Chicken = new Chicken(10, 'Medium', 'Orange Chicken', 'yes')
-let Steak = new Steak(10, 'Medium', 'Steak and Potatoes', false)
+let meals = new Meals(5, 'easy', 'Ommelete');
+let chicken = new Chicken(10, 'Medium', 'Orange Chicken', 'yes');
+let steak = new Steak(10, 'Medium', 'Steak and Potatoes', true);
+let steak2 = new Steak(10, 'Medium', 'Steak and Potatoes', false);
 
-console.log(Meals)
-console.log(Chicken)
-console.log(Steak)
+
+console.log(meals);
+console.log(chicken);
+console.log(steak);
+
+meals.addGarnish();
+chicken.addGarnish();
+steak.addGarnish();
+
+console.log(meals);
+console.log(chicken);
+console.log(steak);
+
+steak.serve();
+console.log(steak);
+
+steak2.serve();
+console.log(steak2);
